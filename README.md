@@ -1,11 +1,11 @@
-# 🛍️ Comfy Store
+# Comfy Store
 
 A simple e-commerce web app built with **Vite**, **Tailwind CSS**, and **DaisyUI**.  
 This project is focused on learning and practicing modern frontend development with a clean, responsive UI.
 
 ---
 
-## ✨ Features
+## Features
 
 - Fast builds & hot reloading with **Vite**
 - Modern, utility-first styling using **Tailwind CSS**
