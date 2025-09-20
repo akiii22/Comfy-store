@@ -1,5 +1,7 @@
 @import "tailwindcss";
-@plugin "daisyui";
+@plugin "daisyui" {
+  themes: fantasy --default, synthwave;
+}
 
 @layer components {
   .align-element {
