@@ -9,3 +9,4 @@ export { default as SectionTitle } from "./SectionTitle.jsx";
 export { default as Filters } from "./Filters.jsx";
 export { default as ProductsContainer } from "./ProductsContainer.jsx";
 export { default as PaginationContainer } from "./PaginationContainer.jsx";
+export { default as Loading } from "./Loading.jsx";
