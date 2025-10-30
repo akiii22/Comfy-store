@@ -11,11 +11,6 @@ const Navbar = () => {
     dispatch(toggleTheme());
   };
 
-  // useEffect(() => {
-  //   document.documentElement.setAttribute("data-theme", theme);
-  //   localStorage.setItem("theme", theme);
-  // }, [theme]);
-
   const numItemsInCart = useSelector((state) => state.cartState.numItemsInCart);
 
   return (
