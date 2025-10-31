@@ -23,8 +23,10 @@ const usersSlice = createSlice({
     loginUser: (state, action) => {
       console.log("Login");
     },
-    logoutUser: (state, action) => {
-      console.log("Logout");
+    logoutUser: (state) => {
+      state.user = null;
+      localStorage.removeItem("user");
+      toast.success("Logout successfully");
     },
     toggleTheme: (state) => {
       const { fantasy, synthwave } = themes;
