@@ -6,13 +6,16 @@ const themes = {
   synthwave: "synthwave",
 };
 
+const getUserFromLocalStorage = () => {
+  return JSON.parse(localStorage.getItem("user")) || null;
+};
 const getThemeFromLocalstorage = () => {
   const theme = localStorage.getItem("theme");
   document.documentElement.setAttribute("data-theme", theme);
   return theme;
 };
 const initialState = {
-  user: { username: "Jerome" },
+  user: getThemeFromLocalstorage(),
   theme: getThemeFromLocalstorage(),
 };
 
@@ -21,7 +24,9 @@ const usersSlice = createSlice({
   initialState,
   reducers: {
     loginUser: (state, action) => {
-      console.log("Login");
+      const user = { ...action.payload.user, token: action.payload.jwt };
+      state.user = user;
+      localStorage.setItem("user", JSON.stringify(user));
     },
     logoutUser: (state) => {
       state.user = null;
